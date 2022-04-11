@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: floralwhite;
+    padding: 5px 0;
+}
+
+.header-container {
+    max-width: 0px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu > a {
+    font-size: 1em;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+}
+
+.language {
+    position: relative;
+    width: 120px;
+    margin-left: 40px;
+    font-weight: bold;
+}
+.language-selected {
+    display: flex;   
+    align-items: center;
+    color: rgba(153, 24, 212, 0.781);
+    cursor: pointer;
+}
+.language-selected:before {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url('../img/brazil-flag-icon-16.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+ /* jQuery */
+
+.language-selected.change-br:before {
+    background-image: url('../img/brazil-flag-icon-16.png');
+}
+.language-selected.change-en:before {
+    background-image: url('../img/united-states-of-america-flag-icon-16.png');
+}
+.language-selected.change-es:before {
+    background-image: url('../img/spain-flag-icon-16.png');
+}
+/* jQuery last */
+
+.language ul {
+    position: absolute;
+    width: 140px;
+    background-color: rgb(247, 247, 247);
+    border: 1px solid #ccbbff;
+    padding-top: 10px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.language ul li {
+    list-style: none;
+}
+
+.language ul li a {
+    display: block;
+    color: #252525;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+.language ul li a:hover{
+    color: #9b7df7;
+    text-decoration: underline;
+}
+.language ul li:hover {
+    background-color: #ecebeb;
+}
+
+.language ul li a:before {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+a.br:before {
+    background-image: url('../img/brazil-flag-icon-16.png');
+}
+
+a.en:before {
+    background-image: url('../img/united-states-of-america-flag-icon-16.png');
+}
+a.es:before {
+    background-image: url('../img/spain-flag-icon-16.png');
+}
+
+.language:hover ul {
+    display: block;
+}
+#titulo {
+    font-family: sans-serif;
+    color: purple;
+    margin-left: 7%;
+}
+
+#subtitulo {
+    font-family: sans-serif;
+    color: purple;
+    margin-left: 10%;
+}
+
+#check {
+    display: inline-block;
+}
+
+fieldset {
+    border: 0;
+}
+
+body{
+    background-color: floralwhite;
+    font-family: sans-serif;
+    font-size: 1em;
+    color: purple;
+    margin-left: 36%;
+    margin-top: 2%;
+    justify-content: center;
+}
+
+input, select, textarea, button {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #59420d;
+    border-radius: 5px;
+}
+
+.grupo:before, .grupo:after {
+    display: table;
+}
+
+.grupo:after {
+    clear: both;
+}
+
+.campo {
+    margin-bottom: 1em;
+}
+
+.campo label {
+    margin-bottom: 0.2em;
+    color: purple;
+    display: block;
+}
+
+#fieldset.grupo .campo {
+    float: left;
+    margin-right: 1em;
+}
+
+.campo input[type="text"], .campo input[type="email"], .campo select, .campo textarea {
+    padding: 0.2em;
+    border: 1px solid purple;
+    box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.2);
+    display: block;
+}
+
+.campo select option {
+    padding-right: 1em;
+}
+
+.campo input:focus, .campo select:focus, .campo textarea:focus {
+    background: aliceblue;
+}
+
+.botao {
+    font-size: 1.2em;
+    background: purple;
+    border: 0;
+    margin-bottom: 1em;
+    color: floralwhite;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 90%;
+    left: 50%;
+    margin-right: -50%;  
+    animation: notification 2s infinite ;
+    }
+    @keyframes notification{
+        5%{ transform: rotate(10deg); }
+        10%{ transform: rotate(-10deg); }
+        15%{ transform: rotate(10deg); }
+        20%{ transform: rotate(0deg); }
+    }
+
+
+.botao:hover {
+    background: #ccbbff;
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: none;
+}
+
+.botao, select {
+    cursor: pointer;
+}
+
